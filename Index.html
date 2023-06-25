@@ -1,20 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="./inscription.css" />
+    <script src="./inscription.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img id="bg" src="./media/champs de fraise.png" alt="" />
+      <img id="perso" src="./media/Header-Local_Products.png" alt="" />
+    </header>
+    <nav>
+      <div class="icon">BLABLA</div>
+      <h1>LA RUCHE DES PRODUCTEURS</h1>
+      <p>Bonjour,(user)</p>
+    </nav>
+    <main>
+      <h2>Votre sociéte</h2>
 
-    <div>
-    <form action="./inscription.php" method="post">
-        <input type="text" name="user_name" id="name" required>
-        <input type="email" name="user_email" id="email" required>
-        <input type="tel" name="user_phone" id="phone" required>
-        <button type="submit">envoyer</button>
-    </form>
-    </div>
-</body>
+      <form action="./inscription.php" method="post">
+        <div class="form1">
+          <label for="siret">SIRET</label>
+          <input type="text" name="siret" id="siret" />
+
+          <label for="nom">NOM</label>
+          <input type="text" name="name" id="nom" />
+
+          <label for="prenom">PRENOM</label>
+          <input type="text" name="firstname" id="nom" />
+
+          <label for="numero">NUMERO DE RUE</label>
+          <input type="text" name="numero" id="numero" />
+
+          <label for="rue">RUE</label>
+          <input type="text" name="rue" id="rue" />
+
+          <label for="codepostal">CODE POSTAL</label>
+          <input type="text" name="codepostal" id="codepostal" />
+
+          <label for="ville">VILLE</label>
+          <input type="text" name="ville" id="ville" />
+
+          <label for="tel">TELEPHONE</label>
+          <input type="tel" name="phone" id="tel" />
+        </div>
+        <div class="form2">
+          <label for="email">EMAIL</label>
+          <input type="email" name="email" id="email" />
+
+          <label for="password">MOT DE PASSE</label>
+          <input type="password" name="password" id="password" />
+
+          <label for="password2">CONFIRMER VOTRE MOT DE PASSE</label>
+          <input type="password" name="password2" id="password2" />
+        </div>
+
+        <div class="form3">
+          <fieldset>
+            <legend>Vous Vendez ?</legend>
+            <div>
+              <input
+                type="checkbox"
+                name="legumes"
+                id="legumes"
+                value="legumes"
+              /><label for="legumes">Légumes</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="fruits"
+                id="fruits"
+                value="fruits"
+              /><label for="fruits">Fruits</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="boucherie"
+                id="boucherie"
+                value="boucherie"
+              /><label for="boucherie">Boucherie</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="charcuterie"
+                id="charcuterie"
+                value="charcuterie"
+              /><label for="charcuterie">Charcuterie</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="produits laitiers"
+                id="produits laitiers"
+                value="produits laitiers"
+              /><label for="produits laitiers">Produits laitiers</label>
+            </div>
+            <div>
+              <input type="checkbox" name="miel" id="miel" value="miel" /><label
+                for="miel"
+                >Miel</label
+              >
+            </div>
+          </fieldset>
+
+          <div class="CGU">
+            <label for="CGU_OK"
+              >J'ai lu et j'accepte les <a href="#">CGU</a></label
+            >
+            <input type="radio" name="CGU_OK" id="CGU_OK" />
+          </div>
+          <button type="submit">Envoyer</button>
+        </div>
+      </form>
+    </main>
+
+    <footer><p>Copyright 2023</p></footer>
+  </body>
 </html>

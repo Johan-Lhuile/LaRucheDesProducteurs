@@ -4,18 +4,29 @@
 //------------------------------------------------------------------------------
 // require_once 'login.php';
 //On recupere les input HTML 
-$name = $_POST['user_name'];
-$email = $_POST ['user_email'];
-$phone = $_POST['user_phone'];
-// $password = $_POST ["password"];
-// $siret = $_POST ["siret"];
-// $adress = $_POST ["adress"];
-// $codePostal = $_POST ["codePostal"];
-// $city = $_POST ["city"];
+$siret = $_POST ["siret"];
+$name = $_POST["name"];
+$firstname = $_POST["firstname"];
+$number = $_POST["numero"];
+$rue = $_POST["rue"];
+$codepostal = $_POST ["codepostal"];
+$city = $_POST ["ville"];
+$phone = $_POST["phone"];
+$email = $_POST ["email"];
+$password = $_POST ["password"];
+
 //! reste les autre input du formulaire d'inscription
-echo $name;
+
+//------------------------------------------------------------------------------
+                    //--------HASH PASSWORD---------------
+//------------------------------------------------------------------------------
+
 //On crypt le MDP avant de L'envoyer sur la BDD (dernier hash sorti)
-// $crypt_password = password_hash($password, PASSWORD_ARGON2ID);
+$crypt_password = password_hash($password, PASSWORD_ARGON2ID);
+    
+//------------------------------------------------------------------------------
+                    //--------ENVOIE BDD---------------
+//------------------------------------------------------------------------------
 
 //conexion a la BDD Mysql
 // on creer un  nouvel object de conexion $pdo
@@ -26,18 +37,24 @@ echo $name;
 $pdo = new PDO('mysql:host=localhost;dbname=laruchedesproducteurs','root','root');
 
 // on prepare la requete, (ressemble au GIT ADD et GIT COMMIT) les ??? pour eviter les injection SQL
-$req = $pdo->prepare("INSERT INTO inscription (name, email, phone) VALUES (?, ?, ?)");
+$req = $pdo->prepare("INSERT INTO inscription (siret, name, firstname, number, rue, codepostal, city, email, crypt_password ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 // on envoie ( GIT PUSH )
 $req->execute([
+    $siret,
     $name,
+    $firstname,
+    $number,
+    $rue,
+    $codepostal,
+    $city,
     $email,
-    $phone,
-    // $password,
-    // $siret,
-    // $adress,
-    // $codePostal,
-    // $city
+    $crypt_password
+
 ]);
+
+//------------------------------------------------------------------------------
+                    //--------CREATION D'UNE TABLE---------------
+//------------------------------------------------------------------------------
 
 // on creer une table dans la base de donnée
 
@@ -52,7 +69,6 @@ $req->execute([
 //     codePostal INT(5) NOT NULL,
 //     city VARCHAR NOT NULL,
 //     )";
-
 
 //------------------------------------------------------------------------------
                     //--------VERIFY PASSWORD---------------
