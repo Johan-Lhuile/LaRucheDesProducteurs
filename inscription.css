@@ -1,0 +1,183 @@
+body {
+  background-color: #ffdeb5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+header {
+  /* height: 195px; */
+  position: relative;
+  box-shadow: inset 0em -4em 8px rgba(0, 0, 0, 0.5);
+}
+
+#perso {
+  position: absolute;
+  top: -60%;
+  width: 95%;
+  left: 30px;
+  
+}
+
+#bg {
+  width: 100%;
+  
+}
+
+nav {
+  background-color: #844613;
+  height: 80px;
+  box-shadow: inset 0em 1em 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ffffff;
+}
+
+nav h1 {
+  font-size: 3.4rem;
+  text-align: center;
+  margin: auto;
+}
+
+nav p {
+  text-align: center;
+  font-size: 1.3rem;
+  width: 15%;
+  margin-top: 30px;
+}
+
+h2 {
+  padding: 0 25px;
+}
+
+.icon {
+  font-size: 1.3rem;
+  width: 15%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h2 {
+  background-color: #92ab3a;
+  text-align: center;
+  font-size: 2.1rem;
+  width: 390px;
+  margin: 50px auto;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.form1,
+.form2,
+.form3 {
+  background-color: #b38335;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.form3 div,
+legend {
+  background-color: #92ab3a;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+label {
+  padding: 10px 5px;
+}
+input {
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  height: 25px;
+}
+
+button {
+  margin-top: 140px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #92ab3a;
+  border-radius: 8px;
+  border: 2px solid #d9d9d9;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+footer {
+  background-color: #b38335;
+  height: 120px;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 2%;
+}
+
+/* ------------------------------------------------------------ */
+/* --------------------MEDIA AND SCREEN------------------------ */
+/* ------------------------------------------------------------ */
+
+@media screen and (max-width: 1200px) {
+
+nav h1 {
+    font-size: 2.5rem ;
+}
+nav p {
+  margin-top: 25px;
+}
+
+h2 {
+  width: 50%;
+  padding: 0 40px;
+}
+
+form { 
+  flex-direction: column;
+}
+.form1,
+.form2,
+.form3 {
+width: 50%;
+margin: 20px auto;
+}
+}
+
+
+@media screen and (max-width: 900px) {
+
+  nav h1 {
+    font-size: 2rem ;
+  }
+
+  nav p {
+    margin-top: 15px;
+  }
+
+  form { 
+    flex-direction: column;
+  }
+  .form1,
+  .form2,
+  .form3 {
+  width: 70%;
+  margin: 50px auto;
+}
+}
+
+@media screen and (max-width: 750px) {
+}
