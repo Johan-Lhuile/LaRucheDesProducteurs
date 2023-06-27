@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.img-presentation {
+  z-index: 999;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #844613;
+  padding: 25px 0;
+  width: 100%;
+  transform: translate(0, -17px);
+}
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #e8e8e8;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+
+
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #111;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  margin-left: 20px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  color: white;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+main {
+  width: 100%;
+  position: relative;
+
+}
+
+h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.logo1 {
+  width: 10px;
+  height: 10px;
+  border: radius 50%;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+    align-items: center;
+    margin: 50px auto;
+    width: 21.8rem;
+
+}
+
+#search {
+  border-radius: 50px;
+  border: 1px solid black;
+  width: 18.75rem;
+  height: 40px;
+  
+
+}
+
+.search-logo {
+  padding: 10px;
+
+}
+
+.logos-presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+}
+
+.product-presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 8rem;
+}
+
+.product-presentation .kilometers {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-presentation .kilometers .globe {
+  margin-right: 1rem;
+}
+
+.logos-presentation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: auto;
+  margin-bottom: 1rem;
+  
+}
+
+.logos{
+  width: 12.5rem;
+}

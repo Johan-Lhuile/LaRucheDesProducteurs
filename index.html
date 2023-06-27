@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rechercher produit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./chercher produit.css">
 </head>
 
 <body>
@@ -49,24 +49,44 @@
         <div id="search-product">
             <h2>RECHERCHER UN PRODUIT</h2>
 
-            <input type="search" id="search" value="">
-
-            <img class="search-logo" src="./images/search.png" alt="">
-
+            <div class="search-bar">                
+                <input type="search" id="search" value="">  
+                <img class="search-logo" src="./images/search.png" alt="" width="30px" height="30px">              
+            </div>
 
         </div>
 
         <div class="product-presentation">
-            <div class="product-type">
-                <input type="radio">
 
+            <div class="product-type">
+                <select name="" id="products-types">
+                    <option value="Apicultures">Apicultures</option>
+                    <option value="Legumes">Legumes</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Produits-laitiers">Produits laitiers</option>
+                    <option value="Boissons">Boissons</option>
+                    <option value="Boucherie">Boucherie</option>
+                    <option value="Charcuterie">Charcuterie</option>
+                </select>
             </div>
+
             <div class="kilometers">
+                <div class="globe">
+                    <img src="./images/icons8-globe-48.png" alt="">
+                </div>
+
+                <select name="" id="kms">
+                    <option value="">10kms</option>
+                    <option value="">20kms</option>
+                    <option value="">30kms</option>
+                </select>
 
             </div>
             <div class="position">
-
+                <label for="Position">Ma Position</label>
+                <input type="radio">
             </div>
+
         </div>
 
         <div class="logos-presentation">
@@ -75,7 +95,6 @@
             <img class="logos" src="./images/logo-legume-et-fruit.png" alt="legume et fruit">
             <img class="logos" src="./images/logo-produits-laitier.png" alt="produits laitiers">
             <img class="logos" src="./images/logo-boisson.png" alt="boisson">
-
         </div>
 
     </main>
